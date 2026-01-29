@@ -1,0 +1,61 @@
+.benefits-section {
+    padding: var(--section-padding);
+    background: linear-gradient(to bottom, var(--bg-main), var(--bg-card));
+    /* Subtle fade */
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 4rem;
+    margin-top: 5rem;
+}
+
+.benefit-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: var(--bg-card);
+    /* Add card bg for better pop */
+    padding: 2rem;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Number Styling - Big and Gradient */
+.benefit-number {
+    font-family: var(--font-display);
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.2;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    transition: opacity 0.3s;
+}
+
+.benefit-item:hover .benefit-number {
+    opacity: 1;
+    /* Highlight on hover */
+}
+
+.benefit-item h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    /* Make space if needed */
+    position: relative;
+    z-index: 2;
+}
+
+.benefit-item p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
